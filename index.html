@@ -25,13 +25,13 @@
                 <button id="send" class="btn btn-success">Send</button>
                 
             </div>
-            <div id="messages" style="background:color:darkgray">
+            <div id="messages" style="background-color:darkgray">
 
             </div>
         </div>
 
         <script>
-            
+            ,
             var socket= io()
             $(()=>{
                 $("#send").click(()=> {
@@ -49,6 +49,7 @@
             function addMessages(msg){
 
               $("#messages").append(`<h4> ${msg.name} </h4> <p> ${msg.message} </p>`)
+              
 
             }
 
@@ -60,6 +61,8 @@
                 })
                 
             }
+
+            
 
             function postMessages(message) {
 

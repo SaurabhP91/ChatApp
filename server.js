@@ -5,8 +5,8 @@ var http = require('http').Server(app)
 var io = require('socket.io')(http)
 
 var mongoose=require('mongoose')
+var port= process.env.PORT || 8000
 
-//mongodb+srv://saurabhP91:<password>@cluster0.hxabaao.mongodb.net/?retryWrites=true&w=majority
 var app = express()
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
